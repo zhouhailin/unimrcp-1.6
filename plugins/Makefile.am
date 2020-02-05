@@ -10,12 +10,12 @@ if DEMORECOG_PLUGIN
 SUBDIRS               += demo-recog
 endif
 
-if ALICLOUDSYNTH_PLUGIN
-SUBDIRS               += alicloud-synth
+if XFYUNSYNTH_PLUGIN
+SUBDIRS               += xfyun-synth
 endif
 
 if DEMORECOG_PLUGIN
-SUBDIRS               += alicloud-recog
+SUBDIRS               += xfyun-recog
 endif
 
 if DEMOVERIFIER_PLUGIN

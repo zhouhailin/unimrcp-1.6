@@ -88,6 +88,8 @@ add_subdirectory (plugins/demo-recog)
 add_subdirectory (plugins/demo-synth)
 add_subdirectory (plugins/alicloud-recog)
 add_subdirectory (plugins/alicloud-synth)
+add_subdirectory (plugins/xfyun-recog)
+add_subdirectory (plugins/xfyun-synth)
 add_subdirectory (plugins/demo-verifier)
 add_subdirectory (plugins/mrcp-recorder)
 
