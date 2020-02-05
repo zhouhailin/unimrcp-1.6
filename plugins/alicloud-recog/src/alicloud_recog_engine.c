@@ -185,10 +185,10 @@ static apt_bool_t alicloud_recog_engine_open(mrcp_engine_t *engine)
         apt_log(RECOG_LOG_MARK,APT_PRIO_INFO,"# Alicloud recog engine open.");
 	
 	const mrcp_engine_config_t *config = mrcp_engine_config_get(engine);
-        apt_log(SYNTH_LOG_MARK,APT_PRIO_INFO,"######## max_channel_count : %d", config->max_channel_count);
+        apt_log(RECOG_LOG_MARK,APT_PRIO_INFO,"# Alicloud recog engine open ######## max_channel_count : %d", config->max_channel_count);
         const char *accessKeyId = apr_table_get(config->params, "accessKeyId");
-        apt_log(SYNTH_LOG_MARK,APT_PRIO_INFO,"######## accessKeyId     : %s", accessKeyId);
-        apt_log(SYNTH_LOG_MARK,APT_PRIO_INFO,"######## accessKeySecret : %s", apr_table_get(config->params, "accessKeySecret"));
+        apt_log(RECOG_LOG_MARK,APT_PRIO_INFO,"# Alicloud recog engine open ######## accessKeyId       : %s", accessKeyId);
+        apt_log(RECOG_LOG_MARK,APT_PRIO_INFO,"# Alicloud recog engine open ######## accessKeySecret   : %s", apr_table_get(config->params, "accessKeySecret"));
 
 	alicloud_recog_engine_t *alicloud_engine = engine->obj;
 	if(alicloud_engine->task) {

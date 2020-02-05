@@ -185,6 +185,13 @@ static apt_bool_t alicloud_synth_engine_destroy(mrcp_engine_t *engine)
 static apt_bool_t alicloud_synth_engine_open(mrcp_engine_t *engine)
 {
 	apt_log(SYNTH_LOG_MARK,APT_PRIO_INFO,"# Alicloud synth engine open.");
+
+        const mrcp_engine_config_t *config = mrcp_engine_config_get(engine);
+        apt_log(SYNTH_LOG_MARK,APT_PRIO_INFO,"# Alicloud synth engine open ######## max_channel_count : %d", config->max_channel_count);
+        const char *accessKeyId = apr_table_get(config->params, "accessKeyId");
+        apt_log(SYNTH_LOG_MARK,APT_PRIO_INFO,"# Alicloud synth engine open ######## accessKeyId       : %s", accessKeyId);
+        apt_log(SYNTH_LOG_MARK,APT_PRIO_INFO,"# Alicloud synth engine open ######## accessKeySecret   : %s", apr_table_get(config->params, "accessKeySecret"));
+
 	alicloud_synth_engine_t *alicloud_engine = engine->obj;
 	if(alicloud_engine->task) {
 		apt_task_t *task = apt_consumer_task_base_get(alicloud_engine->task);
@@ -212,12 +219,6 @@ static mrcp_engine_channel_t* alicloud_synth_engine_channel_create(mrcp_engine_t
 	mpf_termination_t *termination; 
 
 	apt_log(SYNTH_LOG_MARK,APT_PRIO_INFO,"# Alicloud synth engine channel create ...");
-
-        const mrcp_engine_config_t *config = mrcp_engine_config_get(engine);
-        apt_log(SYNTH_LOG_MARK,APT_PRIO_INFO,"######## max_channel_count : %d", config->max_channel_count);
-        const char *accessKeyId = apr_table_get(config->params, "accessKeyId");
-        apt_log(SYNTH_LOG_MARK,APT_PRIO_INFO,"######## accessKeyId     : %s", accessKeyId);
-        apt_log(SYNTH_LOG_MARK,APT_PRIO_INFO,"######## accessKeySecret : %s", apr_table_get(config->params, "accessKeySecret"));
 
 	/* create alicloud synth channel */
 	alicloud_synth_channel_t *synth_channel = apr_palloc(pool,sizeof(alicloud_synth_channel_t));
