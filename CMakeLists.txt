@@ -86,6 +86,8 @@ add_subdirectory (modules/mrcp-unirtsp)
 # Sub-projects: plug-ins
 add_subdirectory (plugins/demo-recog)
 add_subdirectory (plugins/demo-synth)
+add_subdirectory (plugins/alicloud-recog)
+add_subdirectory (plugins/alicloud-synth)
 add_subdirectory (plugins/demo-verifier)
 add_subdirectory (plugins/mrcp-recorder)
 

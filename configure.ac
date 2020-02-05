@@ -180,6 +180,18 @@ UNI_PLUGIN_ENABLED(demorecog)
 
 AM_CONDITIONAL([DEMORECOG_PLUGIN],[test "${enable_demorecog_plugin}" = "yes"])
 
+
+dnl Alicloud synthesizer plugin.
+UNI_PLUGIN_ENABLED(alicloudsynth)
+
+AM_CONDITIONAL([ALICLOUDSYNTH_PLUGIN],[test "${enable_alicloudsynth_plugin}" = "yes"])
+
+dnl Alicloud recognizer plugin.
+UNI_PLUGIN_ENABLED(alicloudrecog)
+
+AM_CONDITIONAL([ALICLOUDRECOG_PLUGIN],[test "${enable_alicloudrecog_plugin}" = "yes"])
+
+
 dnl Demo verifier plugin.
 UNI_PLUGIN_ENABLED(demoverifier)
 
@@ -219,6 +231,8 @@ AC_CONFIG_FILES([
     plugins/mrcp-recorder/Makefile
     plugins/demo-synth/Makefile
     plugins/demo-recog/Makefile
+    plugins/alicloud-synth/Makefile
+    plugins/alicloud-recog/Makefile
     plugins/demo-verifier/Makefile
     platforms/Makefile
     platforms/libunimrcp-server/Makefile
@@ -270,6 +284,8 @@ echo UniMRCP server app............ : $enable_server_app
 echo
 echo Demo synthesizer plugin....... : $enable_demosynth_plugin
 echo Demo recognizer plugin........ : $enable_demorecog_plugin
+echo Alicloud synthesizer plugin... : $enable_alicloudsynth_plugin
+echo Alicloud recognizer plugin.... : $enable_alicloudrecog_plugin
 echo Demo verifier plugin.......... : $enable_demoverifier_plugin
 echo Recorder plugin............... : $enable_recorder_plugin
 echo
