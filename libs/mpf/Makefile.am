@@ -2,10 +2,15 @@ MAINTAINERCLEANFILES     = Makefile.in
 
 AM_CPPFLAGS              = -I$(top_srcdir)/libs/mpf/codecs \
                            -I$(top_srcdir)/libs/mpf/include \
+                           -I$(top_srcdir)/libs/mpf \
                            -I$(top_srcdir)/libs/apr-toolkit/include \
                            $(UNIMRCP_APR_INCLUDES)
 
 noinst_LTLIBRARIES       = libmpf.la
+
+#libmpf_la_LDFLAGS       = -L$(top_srcdir)/libs/mpf/ -lcommonaudio
+#libmpf_ladir            = $(libdir)
+#libmpf_la_DATA          = $(top_srcdir)/libs/mpf/libcommonaudio.so
 
 include_HEADERS          = codecs/g711/g711.h \
                            include/mpf.h \
@@ -48,7 +53,13 @@ include_HEADERS          = codecs/g711/g711.h \
                            include/mpf_rtp_attribs.h \
                            include/mpf_rtp_pt.h \
                            include/mpf_rtcp_packet.h \
-                           include/mpf_resampler.h
+                           include/mpf_resampler.h \
+                           webrtc/typedefs.h \
+                           webrtc/system_wrappers/interface/cpu_features_wrapper.h \
+                           webrtc/common_audio/signal_processing/include/real_fft.h \
+                           webrtc/common_audio/signal_processing/include/signal_processing_library.h \
+                           webrtc/common_audio/signal_processing/include/spl_inl.h \
+                           webrtc/common_audio/vad/include/webrtc_vad.h
 
 libmpf_la_SOURCES        = codecs/g711/g711.c \
                            src/mpf_activity_detector.c \
@@ -79,4 +90,29 @@ libmpf_la_SOURCES        = codecs/g711/g711.c \
                            src/mpf_rtp_stream.c \
                            src/mpf_rtp_attribs.c \
                            src/mpf_resampler.c \
-                           src/mpf_stream.c
+                           src/mpf_stream.c \
+                           webrtc/common_audio/signal_processing/complex_bit_reverse.c \
+                           webrtc/common_audio/signal_processing/complex_fft_tables.h \
+                           webrtc/common_audio/signal_processing/complex_fft.c \
+                           webrtc/common_audio/signal_processing/cross_correlation.c \
+                           webrtc/common_audio/signal_processing/division_operations.c \
+                           webrtc/common_audio/signal_processing/downsample_fast.c \
+                           webrtc/common_audio/signal_processing/energy.c \
+                           webrtc/common_audio/signal_processing/get_scaling_square.c \
+                           webrtc/common_audio/signal_processing/min_max_operations.c \
+                           webrtc/common_audio/signal_processing/real_fft.c \
+                           webrtc/common_audio/signal_processing/resample_48khz.c \
+                           webrtc/common_audio/signal_processing/resample_by_2_internal.h \
+                           webrtc/common_audio/signal_processing/resample_by_2_internal.c \
+                           webrtc/common_audio/signal_processing/resample_fractional.c \
+                           webrtc/common_audio/signal_processing/spl_init.c \
+                           webrtc/common_audio/signal_processing/vector_scaling_operations.c \
+                           webrtc/common_audio/vad/vad_core.h \
+                           webrtc/common_audio/vad/vad_filterbank.h \
+                           webrtc/common_audio/vad/vad_gmm.h \
+                           webrtc/common_audio/vad/vad_sp.h \
+                           webrtc/common_audio/vad/vad_core.c \
+                           webrtc/common_audio/vad/vad_filterbank.c \
+                           webrtc/common_audio/vad/vad_gmm.c \
+                           webrtc/common_audio/vad/vad_sp.c \
+                           webrtc/common_audio/vad/webrtc_vad.c 

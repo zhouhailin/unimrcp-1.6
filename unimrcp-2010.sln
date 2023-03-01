@@ -60,6 +60,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "demosynth", "plugins\demo-s
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "demorecog", "plugins\demo-recog\demorecog.vcxproj", "{B495B6D9-AF84-479D-B30A-313C16EF8BFD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "alicloudsynth", "plugins\alicloud-synth\alicloudsynth.vcxproj", "{92BFA534-C419-4EB2-AA43-510653F38F18}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "alicloudrecog", "plugins\alicloud-recog\alicloudrecog.vcxproj", "{B495B6D9-AF84-479D-B33A-313C16EF8B2D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xfyunsynth", "plugins\alicloud-synth\xfyunsynth.vcxproj", "{92BFA534-C419-4EB2-AA43-510653F38F38}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xfyunrecog", "plugins\alicloud-recog\xfyunrecog.vcxproj", "{B495B6D9-AF84-479D-B33A-313C16EF8B4D}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "strtablegen", "tests\strtablegen\strtablegen.vcxproj", "{79EF9F1D-E211-4ED1-91D2-FC935AB3A872}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "apttest", "tests\apttest\apttest.vcxproj", "{429C907B-97D1-4B2D-9B0E-A14A5BFDAD15}"

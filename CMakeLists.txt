@@ -56,7 +56,8 @@ set (MRCP_INCLUDE_DIRS
 	${CMAKE_SOURCE_DIR}/libs/mrcp/include
 	${CMAKE_SOURCE_DIR}/libs/mrcp/control/include
 	${CMAKE_SOURCE_DIR}/libs/mrcp/message/include
-	${CMAKE_SOURCE_DIR}/libs/mrcp/resources/include)
+	${CMAKE_SOURCE_DIR}/libs/mrcp/resources/include
+	${CMAKE_SOURCE_DIR}/libs/webrtc_vad/include)
 set (MRCP_SIGNALING_INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/libs/mrcp-signaling/include)
 set (MRCPv2_TRANSPORT_INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/libs/mrcpv2-transport/include)
 set (MRCP_ENGINE_INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/libs/mrcp-engine/include)
@@ -86,6 +87,10 @@ add_subdirectory (modules/mrcp-unirtsp)
 # Sub-projects: plug-ins
 add_subdirectory (plugins/demo-recog)
 add_subdirectory (plugins/demo-synth)
+add_subdirectory (plugins/alicloud-recog)
+add_subdirectory (plugins/alicloud-synth)
+add_subdirectory (plugins/xfyun-recog)
+add_subdirectory (plugins/xfyun-synth)
 add_subdirectory (plugins/demo-verifier)
 add_subdirectory (plugins/mrcp-recorder)
 

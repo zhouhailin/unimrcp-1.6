@@ -123,6 +123,25 @@
       <engine id="Demo-Verifier-1" name="demoverifier" enable="true"/>
       <engine id="Recorder-1" name="mrcprecorder" enable="true"/>
 
+      <engine id="Alicloud-Synth-Engine" name="alicloudsynth" enable="false">
+        <max-channel-count>100</max-channel-count>
+        <param name="accessKeyId" value="abc"/>
+        <param name="accessKeySecret" value="abcef"/>
+      </engine>
+      <engine id="Alicloud-Recog-Engine" name="alicloudrecog" enable="false">
+        <max-channel-count>100</max-channel-count>
+        <param name="accessKeyId" value="abc"/>
+        <param name="accessKeySecret" value="abcef"/>
+      </engine>
+
+      <engine id="Xfyun-Synth-Engine" name="xfyunsynth" enable="false">
+        <max-channel-count>100</max-channel-count>
+        <param name="todo" value="abcef"/>
+      </engine>
+      <engine id="Xfyun-Recog-Engine" name="xfyunrecog" enable="false">
+        <max-channel-count>100</max-channel-count>
+        <param name="todo" value="abc"/>
+      </engine>
       <!--
         Engines may have additional named ("max-channel-count") and generic (name/value) parameters.
         For example:

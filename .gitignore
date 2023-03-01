@@ -306,6 +306,47 @@
 /plugins/demo-synth/Makefile.in
 /plugins/demo-synth/Makefile
 
+# /plugins/alicloud-recog/
+/plugins/alicloud-recog/Debug
+/plugins/alicloud-recog/Release
+/plugins/alicloud-recog/x64
+/plugins/alicloud-recog/*.user
+/plugins/alicloud-recog/.libs
+/plugins/alicloud-recog/.deps
+/plugins/alicloud-recog/Makefile.in
+/plugins/alicloud-recog/Makefile
+
+# /plugins/alicloud-synth/
+/plugins/alicloud-synth/Debug
+/plugins/alicloud-synth/Release
+/plugins/alicloud-synth/x64
+/plugins/alicloud-synth/*.user
+/plugins/alicloud-synth/.libs
+/plugins/alicloud-synth/.deps
+/plugins/alicloud-synth/Makefile.in
+/plugins/alicloud-synth/Makefile
+
+# /plugins/xfyun-recog/
+/plugins/xfyun-recog/Debug
+/plugins/xfyun-recog/Release
+/plugins/xfyun-recog/x64
+/plugins/xfyun-recog/*.user
+/plugins/xfyun-recog/.libs
+/plugins/xfyun-recog/.deps
+/plugins/xfyun-recog/Makefile.in
+/plugins/xfyun-recog/Makefile
+
+# /plugins/xfyun-synth/
+/plugins/xfyun-synth/Debug
+/plugins/xfyun-synth/Release
+/plugins/xfyun-synth/x64
+/plugins/xfyun-synth/*.user
+/plugins/xfyun-synth/.libs
+/plugins/xfyun-synth/.deps
+/plugins/xfyun-synth/Makefile.in
+/plugins/xfyun-synth/Makefile
+
+
 # /plugins/demo-verifier/
 /plugins/demo-verifier/Debug
 /plugins/demo-verifier/Release
